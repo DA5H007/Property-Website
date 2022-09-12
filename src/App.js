@@ -1,25 +1,18 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Box } from '@mui/material';
 import './App.css';
+import NavBar from './components/NavBar';
+import PropertyDetails from './page/PropertyDetails';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Box className='App' textAlign='center' sx={{
+        p: {xs: '20px', md: '0 40px 40px'}
+    }}>
+        <NavBar />
+        <PropertyDetails />
+    </Box>
+  )
 }
 
 export default App;

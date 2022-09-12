@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-brand {
+    letter-spacing: 3px;
+    font-size: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar a {
+    margin: 20px;
+    text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar a:link,
+.navbar a:visited {
+    border-bottom: 1px solid #fff;
+    transition: all .2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar a:hover,
+.navbar a:active {
+    cursor: pointer;
+    border-bottom: 1px solid #000;
+}
+
+.ImageGallery-main-img {
+    height: 320px;
+    border-radius: 20px;
+}
+
+.gallery-img {
+    height: 160px;
+    border-radius: 10px;
+}
+
+.scroll-links:link,
+.scroll-links:visited {
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #fff;
+}
+
+.scroll-links:hover,
+.scroll-links:active {
+    color: #341F87;
+    border-bottom: 1px solid #341F87;
+}
+
+.lsu-btn {
+    border: 1px solid #36218B;
+    border-radius: 4px;
+    padding: 8px 16px;
+    width: 60px;
+    font-size: 40px;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .ImageGallery-main-img {
+        height: 240px;
+        border-radius: 20px;
+    }
+
+    .gallery-img {
+        height: 120px;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .navbar a {
+        margin: 10px;
+    }
+
+    .ImageGallery-main-img {
+        height: 320px;
+        border-radius: 20px;
+    }
+
+    .gallery-img {
+        height: 160px;
+        border-radius: 10px;
+    }
+
+    .lsu-btn {
+        padding: 6px 12px;
+        width: 40px;
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .ImageGallery-main-img {
+        height: 200px;
+        border-radius: 20px;
+    }
+
+    .gallery-img {
+        height: 100px;
+        border-radius: 10px;
+    }
 }
